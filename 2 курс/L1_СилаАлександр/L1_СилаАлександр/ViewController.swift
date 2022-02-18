@@ -1,37 +1,44 @@
-//
-//  ViewController.swift
-//  L1_СилаАлександр
-//
-//  Created by Александр Сила on 14.02.2022.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var loginInput: UITextField!
+    @IBOutlet var passwordInput: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let hideKeyboardGestue = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        scrollView.addGestureRecognizer(hideKeyboardGestue)
     }
 
-    @IBAction func logIn(_ sender: Any) {
-        print("Пользователь нажал на кнопку")
+    
+    @IBAction func logInButton(_ sender: Any) {
+        guard let login = loginInput.text,
+              let password = passwordInput.text,
+              login == "admin",
+              password == "123456" else {
+                  
+                  show(message: "Ошибка авторизации")
+                  return
+              }
+        
+        performSegue(withIdentifier: "Log in", sender: nil)
     }
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBAction func loginInput(_ admin: Any) {
-    }
-    
-    @IBAction func passwordInput(_ password: Any) {
-    }
+
+
     
     @objc func keyBoardWasShown(notification: Notification) {
         let info = notification.userInfo! as
         NSDictionary
         let kbSize = (info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue).cgRectValue.size
         let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: kbSize.height, right: 0.0)
-        
+
         self.scrollView.contentInset = contentInsets
     }
     @objc func keyBoardWillBeHidden(notification: Notification) {
@@ -43,7 +50,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self,selector: #selector(self.keyBoardWasShown), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
+
         NotificationCenter.default.addObserver(self,selector: #selector(self.keyBoardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -52,6 +59,10 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func hideKeyboard() {
+        self.scrollView.endEditing(true)
     }
 }
 

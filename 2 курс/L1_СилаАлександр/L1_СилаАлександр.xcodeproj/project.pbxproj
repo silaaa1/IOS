@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F822946427BF9CDC00E635D6 /* UIViewController + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */; };
 		F83B6A1627BA805D00D7179C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1527BA805D00D7179C /* AppDelegate.swift */; };
 		F83B6A1827BA805D00D7179C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1727BA805D00D7179C /* SceneDelegate.swift */; };
 		F83B6A1A27BA805D00D7179C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1927BA805D00D7179C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extention.swift"; sourceTree = "<group>"; };
 		F83B6A1227BA805D00D7179C /* L1_СилаАлександр.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L1_СилаАлександр.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83B6A1527BA805D00D7179C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83B6A1727BA805D00D7179C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F83B6A1527BA805D00D7179C /* AppDelegate.swift */,
 				F83B6A1727BA805D00D7179C /* SceneDelegate.swift */,
 				F83B6A1927BA805D00D7179C /* ViewController.swift */,
+				F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */,
 				F83B6A1B27BA805D00D7179C /* Main.storyboard */,
 				F83B6A1E27BA805E00D7179C /* Assets.xcassets */,
 				F83B6A2027BA805E00D7179C /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				F83B6A1A27BA805D00D7179C /* ViewController.swift in Sources */,
 				F83B6A1627BA805D00D7179C /* AppDelegate.swift in Sources */,
 				F83B6A1827BA805D00D7179C /* SceneDelegate.swift in Sources */,
+				F822946427BF9CDC00E635D6 /* UIViewController + Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
