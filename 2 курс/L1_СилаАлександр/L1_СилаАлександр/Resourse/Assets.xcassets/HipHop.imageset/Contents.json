@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "HipHop.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
