@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     
     @IBOutlet var scrollView: UIScrollView!
@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     @IBAction func logInButton(_ sender: Any) {
         guard let login = loginInput.text,
               let password = passwordInput.text,
-              login == "admin",
-              password == "123456" else {
+              login == "",
+              password == "" else {
                   
                   show(message: "Ошибка авторизации")
                   return

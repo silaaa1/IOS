@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Music skills.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
