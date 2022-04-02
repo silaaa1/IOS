@@ -4,12 +4,12 @@ import UIKit
 class ListOfGroupsController: UITableViewController {
     
     var groups = [
-        Group(image: UIImage.init(named: "Rock"), name: "Rock"),
-        Group(image: UIImage.init(named: "Pop"), name: "Pop"),
-        Group(image: UIImage.init(named: "Jazz"), name: "Jazz"),
-        Group(image: UIImage.init(named: "Classical"), name: "Classical"),
-        Group(image: UIImage.init(named: "HipHop"), name: "HipHop"),
-        Group(image: UIImage.init(named: "Alternative"), name: "Alternative")
+        Group(image: UIImage.init(named: "groupsAvatar/Rock"), name: "Rock"),
+        Group(image: UIImage.init(named: "groupsAvatar/Pop"), name: "Pop"),
+        Group(image: UIImage.init(named: "groupsAvatar/Jazz"), name: "Jazz"),
+        Group(image: UIImage.init(named: "groupsAvatar/Classical"), name: "Classical"),
+        Group(image: UIImage.init(named: "groupsAvatar/HipHop"), name: "HipHop"),
+        Group(image: UIImage.init(named: "groupsAvatar/Alternative"), name: "Alternative")
     ]
 
     override func viewDidLoad() {

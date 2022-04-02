@@ -8,10 +8,11 @@ class FriendCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        imageFriendCell.layer.cornerRadius = 40
-        imageFriendCell.contentMode = .scaleAspectFill
-        imageFriendCell.layer.masksToBounds = true
+
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
 
 }

@@ -4,13 +4,13 @@ import UIKit
 class ListOfFriendsController: UITableViewController {
     
     let friends = [
-        Friend(image: UIImage.init(named: "Cobain"), name: "Kurt Cobain"),
-        Friend(image: UIImage.init(named: "Alekseev"), name: "Ivan Alekseev"),
-        Friend(image: UIImage.init(named: "Sinatra"), name: "Frank Sinatra"),
-        Friend(image: UIImage.init(named: "Rutherford"), name: "Jesse Rutherford"),
-        Friend(image: UIImage.init(named: "Sheeran"), name: "Ed Sheeran"),
-        Friend(image: UIImage.init(named: "Joseph"), name: "Tyler Joseph"),
-        Friend(image: UIImage.init(named: "Dun"), name: "Josh Dun")
+        Friend(image: UIImage.init(named: "friendsAvatar/Cobain"), name: "Kurt Cobain"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Alekseev"), name: "Ivan Alekseev"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Sinatra"), name: "Frank Sinatra"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Rutherford"), name: "Jesse Rutherford"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Sheeran"), name: "Ed Sheeran"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Joseph"), name: "Tyler Joseph"),
+        Friend(image: UIImage.init(named: "friendsAvatar/Dun"), name: "Josh Dun")
     ]
 
     override func viewDidLoad() {

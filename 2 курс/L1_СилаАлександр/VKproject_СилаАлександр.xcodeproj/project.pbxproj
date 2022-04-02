@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80E945B27F6377F00822777 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80E945A27F6377F00822777 /* LikeButton.swift */; };
 		F81EB73F27C4D45700E657B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F81EB73E27C4D45700E657B1 /* Assets.xcassets */; };
 		F81EB74127C4E0E200E657B1 /* ListOfGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EB74027C4E0E200E657B1 /* ListOfGroupsController.swift */; };
 		F81EB74327C4E13C00E657B1 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EB74227C4E13C00E657B1 /* Group.swift */; };
@@ -21,12 +22,24 @@
 		F83B6A1A27BA805D00D7179C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1927BA805D00D7179C /* LoginViewController.swift */; };
 		F83B6A1D27BA805D00D7179C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83B6A1B27BA805D00D7179C /* Main.storyboard */; };
 		F83B6A2227BA805E00D7179C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F83B6A2027BA805E00D7179C /* LaunchScreen.storyboard */; };
+		F84FFD8D27F45C20001C6684 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FFD8B27F45C20001C6684 /* NewsTableViewCell.swift */; };
+		F84FFD8E27F45C20001C6684 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F84FFD8C27F45C20001C6684 /* NewsTableViewCell.xib */; };
+		F84FFD9127F46726001C6684 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FFD9027F46726001C6684 /* News.swift */; };
+		F866F7F827F8AACD00B12666 /* AnoutherNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866F7F627F8AACD00B12666 /* AnoutherNewsCell.swift */; };
+		F866F7F927F8AACD00B12666 /* AnoutherNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F866F7F727F8AACD00B12666 /* AnoutherNewsCell.xib */; };
+		F866F7FC27F8B6FE00B12666 /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866F7FB27F8B6FE00B12666 /* LikeControl.swift */; };
+		F870CD9227EDB094002410B7 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870CD9127EDB094002410B7 /* HomeTableViewController.swift */; };
+		F870CD9427EDC505002410B7 /* MomentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870CD9327EDC505002410B7 /* MomentsTableViewCell.swift */; };
+		F870CD9627EDC5FC002410B7 /* MomentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870CD9527EDC5FC002410B7 /* MomentsCollectionViewCell.swift */; };
+		F870CD9827EDC832002410B7 /* Moments.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870CD9727EDC832002410B7 /* Moments.swift */; };
+		F8740EB827EA120E0060E72B /* avatarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8740EB727EA120E0060E72B /* avatarUIView.swift */; };
 		F8B7B6E027C4C34400C758ED /* ListOfFriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7B6DF27C4C34400C758ED /* ListOfFriendsController.swift */; };
 		F8B7B6E227C4C54500C758ED /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7B6E127C4C54500C758ED /* FriendCell.swift */; };
 		F8B7B6E427C4C8F500C758ED /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7B6E327C4C8F500C758ED /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F80E945A27F6377F00822777 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		F81EB73E27C4D45700E657B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F81EB74027C4E0E200E657B1 /* ListOfGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGroupsController.swift; sourceTree = "<group>"; };
 		F81EB74227C4E13C00E657B1 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -36,13 +49,24 @@
 		F81EB74A27C50BCA00E657B1 /* FriendInfoVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoVeiwController.swift; sourceTree = "<group>"; };
 		F81EB74C27C50C3800E657B1 /* FriendInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoCell.swift; sourceTree = "<group>"; };
 		F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extention.swift"; sourceTree = "<group>"; };
-		F83B6A1227BA805D00D7179C /* L1_СилаАлександр.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L1_СилаАлександр.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F83B6A1227BA805D00D7179C /* VKproject_СилаАлександр.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VKproject_СилаАлександр.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83B6A1527BA805D00D7179C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83B6A1727BA805D00D7179C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F83B6A1927BA805D00D7179C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F83B6A1C27BA805D00D7179C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F83B6A2127BA805E00D7179C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F83B6A2327BA805E00D7179C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F84FFD8B27F45C20001C6684 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		F84FFD8C27F45C20001C6684 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		F84FFD9027F46726001C6684 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		F866F7F627F8AACD00B12666 /* AnoutherNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnoutherNewsCell.swift; sourceTree = "<group>"; };
+		F866F7F727F8AACD00B12666 /* AnoutherNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnoutherNewsCell.xib; sourceTree = "<group>"; };
+		F866F7FB27F8B6FE00B12666 /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		F870CD9127EDB094002410B7 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		F870CD9327EDC505002410B7 /* MomentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTableViewCell.swift; sourceTree = "<group>"; };
+		F870CD9527EDC5FC002410B7 /* MomentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F870CD9727EDC832002410B7 /* Moments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moments.swift; sourceTree = "<group>"; };
+		F8740EB727EA120E0060E72B /* avatarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = avatarUIView.swift; path = "L1_СилаАлександр/Resourse/avatarUIView.swift"; sourceTree = SOURCE_ROOT; };
 		F8B7B6DF27C4C34400C758ED /* ListOfFriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfFriendsController.swift; sourceTree = "<group>"; };
 		F8B7B6E127C4C54500C758ED /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		F8B7B6E327C4C8F500C758ED /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
@@ -79,6 +103,7 @@
 				F81EB74627C5025F00E657B1 /* AllGroupsController.swift */,
 				F81EB74027C4E0E200E657B1 /* ListOfGroupsController.swift */,
 				F8B7B6DF27C4C34400C758ED /* ListOfFriendsController.swift */,
+				F870CD9127EDB094002410B7 /* HomeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -88,6 +113,8 @@
 			children = (
 				F8B7B6E327C4C8F500C758ED /* Friend.swift */,
 				F81EB74227C4E13C00E657B1 /* Group.swift */,
+				F870CD9727EDC832002410B7 /* Moments.swift */,
+				F84FFD9027F46726001C6684 /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,10 +122,17 @@
 		F81EB75127C511B500E657B1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F8740EB727EA120E0060E72B /* avatarUIView.swift */,
 				F81EB74C27C50C3800E657B1 /* FriendInfoCell.swift */,
 				F8B7B6E127C4C54500C758ED /* FriendCell.swift */,
 				F81EB74827C5052B00E657B1 /* AllGroupsCell.swift */,
 				F81EB74427C4E1B200E657B1 /* GroupCell.swift */,
+				F870CD9327EDC505002410B7 /* MomentsTableViewCell.swift */,
+				F870CD9527EDC5FC002410B7 /* MomentsCollectionViewCell.swift */,
+				F866F7FA27F8B2B400B12666 /* NewsCell */,
+				F866F7F627F8AACD00B12666 /* AnoutherNewsCell.swift */,
+				F866F7F727F8AACD00B12666 /* AnoutherNewsCell.xib */,
+				F866F7FB27F8B6FE00B12666 /* LikeControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,7 +156,7 @@
 		F83B6A1327BA805D00D7179C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F83B6A1227BA805D00D7179C /* L1_СилаАлександр.app */,
+				F83B6A1227BA805D00D7179C /* VKproject_СилаАлександр.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,12 +174,22 @@
 			path = "L1_СилаАлександр";
 			sourceTree = "<group>";
 		};
+		F866F7FA27F8B2B400B12666 /* NewsCell */ = {
+			isa = PBXGroup;
+			children = (
+				F84FFD8B27F45C20001C6684 /* NewsTableViewCell.swift */,
+				F84FFD8C27F45C20001C6684 /* NewsTableViewCell.xib */,
+				F80E945A27F6377F00822777 /* LikeButton.swift */,
+			);
+			path = NewsCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F83B6A1127BA805D00D7179C /* L1_СилаАлександр */ = {
+		F83B6A1127BA805D00D7179C /* VKproject_СилаАлександр */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F83B6A2627BA805E00D7179C /* Build configuration list for PBXNativeTarget "L1_СилаАлександр" */;
+			buildConfigurationList = F83B6A2627BA805E00D7179C /* Build configuration list for PBXNativeTarget "VKproject_СилаАлександр" */;
 			buildPhases = (
 				F83B6A0E27BA805D00D7179C /* Sources */,
 				F83B6A0F27BA805D00D7179C /* Frameworks */,
@@ -155,9 +199,9 @@
 			);
 			dependencies = (
 			);
-			name = "L1_СилаАлександр";
+			name = "VKproject_СилаАлександр";
 			productName = "L1_СилаАлександр";
-			productReference = F83B6A1227BA805D00D7179C /* L1_СилаАлександр.app */;
+			productReference = F83B6A1227BA805D00D7179C /* VKproject_СилаАлександр.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F83B6A0D27BA805D00D7179C /* Build configuration list for PBXProject "L1_СилаАлександр" */;
+			buildConfigurationList = F83B6A0D27BA805D00D7179C /* Build configuration list for PBXProject "VKproject_СилаАлександр" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,7 +232,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F83B6A1127BA805D00D7179C /* L1_СилаАлександр */,
+				F83B6A1127BA805D00D7179C /* VKproject_СилаАлександр */,
 			);
 		};
 /* End PBXProject section */
@@ -200,7 +244,9 @@
 			files = (
 				F83B6A2227BA805E00D7179C /* LaunchScreen.storyboard in Resources */,
 				F81EB73F27C4D45700E657B1 /* Assets.xcassets in Resources */,
+				F866F7F927F8AACD00B12666 /* AnoutherNewsCell.xib in Resources */,
 				F83B6A1D27BA805D00D7179C /* Main.storyboard in Resources */,
+				F84FFD8E27F45C20001C6684 /* NewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,13 +262,23 @@
 				F81EB74B27C50BCA00E657B1 /* FriendInfoVeiwController.swift in Sources */,
 				F81EB74727C5025F00E657B1 /* AllGroupsController.swift in Sources */,
 				F8B7B6E427C4C8F500C758ED /* Friend.swift in Sources */,
+				F866F7F827F8AACD00B12666 /* AnoutherNewsCell.swift in Sources */,
 				F8B7B6E227C4C54500C758ED /* FriendCell.swift in Sources */,
+				F84FFD9127F46726001C6684 /* News.swift in Sources */,
 				F8B7B6E027C4C34400C758ED /* ListOfFriendsController.swift in Sources */,
+				F80E945B27F6377F00822777 /* LikeButton.swift in Sources */,
+				F866F7FC27F8B6FE00B12666 /* LikeControl.swift in Sources */,
 				F81EB74527C4E1B200E657B1 /* GroupCell.swift in Sources */,
+				F84FFD8D27F45C20001C6684 /* NewsTableViewCell.swift in Sources */,
+				F870CD9627EDC5FC002410B7 /* MomentsCollectionViewCell.swift in Sources */,
 				F81EB74D27C50C3800E657B1 /* FriendInfoCell.swift in Sources */,
 				F81EB74127C4E0E200E657B1 /* ListOfGroupsController.swift in Sources */,
 				F83B6A1627BA805D00D7179C /* AppDelegate.swift in Sources */,
+				F870CD9427EDC505002410B7 /* MomentsTableViewCell.swift in Sources */,
 				F83B6A1827BA805D00D7179C /* SceneDelegate.swift in Sources */,
+				F870CD9227EDB094002410B7 /* HomeTableViewController.swift in Sources */,
+				F870CD9827EDC832002410B7 /* Moments.swift in Sources */,
+				F8740EB827EA120E0060E72B /* avatarUIView.swift in Sources */,
 				F822946427BF9CDC00E635D6 /* UIViewController + Extention.swift in Sources */,
 				F81EB74927C5052B00E657B1 /* AllGroupsCell.swift in Sources */,
 			);
@@ -425,7 +481,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F83B6A0D27BA805D00D7179C /* Build configuration list for PBXProject "L1_СилаАлександр" */ = {
+		F83B6A0D27BA805D00D7179C /* Build configuration list for PBXProject "VKproject_СилаАлександр" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F83B6A2427BA805E00D7179C /* Debug */,
@@ -434,7 +490,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F83B6A2627BA805E00D7179C /* Build configuration list for PBXNativeTarget "L1_СилаАлександр" */ = {
+		F83B6A2627BA805E00D7179C /* Build configuration list for PBXNativeTarget "VKproject_СилаАлександр" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F83B6A2727BA805E00D7179C /* Debug */,

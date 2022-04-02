@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
               password == "" else {
                   
                   show(message: "Ошибка авторизации")
+            self.loginInput.text?.removeAll()
+            self.passwordInput.text?.removeAll()
                   return
               }
         
