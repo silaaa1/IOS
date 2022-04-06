@@ -3,7 +3,7 @@ import UIKit
 
 class ListOfGroupsController: UITableViewController {
     
-    var groups = [
+    var myGroups = [
         Group(image: UIImage.init(named: "groupsAvatar/Rock"), name: "Rock"),
         Group(image: UIImage.init(named: "groupsAvatar/Pop"), name: "Pop"),
         Group(image: UIImage.init(named: "groupsAvatar/Jazz"), name: "Jazz"),
@@ -15,6 +15,7 @@ class ListOfGroupsController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
     }
 
     // MARK: - Table view data source
@@ -26,17 +27,18 @@ class ListOfGroupsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return myGroups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as? GroupCell else {
-            preconditionFailure("GroupCell cannot find")
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellForList", for: indexPath) as? CellForList else {
+            preconditionFailure("Error")
         }
         
-        cell.labelGroupCell.text = groups[indexPath.row].name
-        cell.imageGroupCell.image = groups[indexPath.row].image
+        cell.labelForList.text = myGroups[indexPath.row].name
+        cell.avaImageForList.image = myGroups[indexPath.row].image
 
         return cell
     }
@@ -49,24 +51,30 @@ class ListOfGroupsController: UITableViewController {
         }
     }
     
-    @IBAction func addSelectedGroup(segue: UIStoryboardSegue) {
-        if let sourceVC = segue.source as? AllGroupsController,
-           let indexPath = sourceVC.tableView.indexPathForSelectedRow {
-            let group = sourceVC.groups[indexPath.row]
-            
-            if !groups.contains(where: {$0.name == group.name}) {
-                groups.append(group)
-                
-                tableView.reloadData()
-            }
-        }
-    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            groups.remove(at: indexPath.row)
+            myGroups.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+//    MARK: - Is't work, fix or remake
+    @IBAction func addSelectedGroupSegue(_ unwindSegue: UIStoryboardSegue) {
+        
+        if let sourceViewController = unwindSegue.source as? AllGroupsController,
+           let indexPath = sourceViewController.tableView.indexPathForSelectedRow {
+            
+            let group = sourceViewController.groups[indexPath.row]
+            if !myGroups.contains(where: {$0.name == group.name}) {
+               
+                myGroups.append(group)
+                tableView.reloadData()
+            }
+            self.performSegue(withIdentifier: "addSelectedGroupSegue", sender: nil)
+        }
+        
+        
     }
 }

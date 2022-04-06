@@ -12,36 +12,73 @@ class ListOfFriendsController: UITableViewController {
         Friend(image: UIImage.init(named: "friendsAvatar/Joseph"), name: "Tyler Joseph"),
         Friend(image: UIImage.init(named: "friendsAvatar/Dun"), name: "Josh Dun")
     ]
+    
+    var sortedFriends = [Character: [Friend]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
+        
+        self.sortedFriends = sort(friends: friends)
     }
-
+    
+    private func sort(friends: [Friend]) -> [Character: [Friend]] {
+        
+        var friendsDict = [Character: [Friend]]()
+        
+        friends.forEach() {friend in
+            
+            guard let firstChar = friend.name.first else {return}
+            
+            if var thisCharFriends = friendsDict[firstChar] {
+                thisCharFriends.append(friend)
+                friendsDict[firstChar] = thisCharFriends
+            } else {
+                friendsDict[firstChar] = [friend]
+            }
+            
+        }
+        return friendsDict
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        
+        return sortedFriends.keys.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return friends.count
+        
+        let keySorted = sortedFriends.keys.sorted()
+        
+        let friends = sortedFriends[keySorted[section]]?.count ?? 0
+        
+        return friends
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as? FriendCell else {
-            preconditionFailure("FriendCell cannot")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellForList", for: indexPath) as? CellForList else {
+            preconditionFailure("Error")
         }
         
-        cell.labelFriendCell.text = friends[indexPath.row].name
-        cell.imageFriendCell.image = friends[indexPath.row].image
+        let firstChar = sortedFriends.keys.sorted()[indexPath.section]
+        let friends = sortedFriends[firstChar]!
+        
+        let friend = friends[indexPath.row]
+        
+        cell.labelForList.text = friend.name
+        cell.avaImageForList.image = friend.image
 
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        String(sortedFriends.keys.sorted()[section])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

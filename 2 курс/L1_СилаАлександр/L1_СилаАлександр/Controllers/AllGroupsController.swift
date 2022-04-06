@@ -1,9 +1,11 @@
 
 import UIKit
 
-class AllGroupsController: UITableViewController {
+class AllGroupsController: UITableViewController, UISearchBarDelegate {
 
-    var groups = [
+    @IBOutlet var searchBar: UISearchBar!
+    
+    let groups = [
         Group(image: UIImage.init(named: "groupsAvatar/Electro"), name: "Electro"),
         Group(image: UIImage.init(named: "groupsAvatar/Music skills"), name: "Music skills"),
         Group(image: UIImage.init(named: "groupsAvatar/Drums"), name: "Drums"),
@@ -18,10 +20,15 @@ class AllGroupsController: UITableViewController {
         Group(image: UIImage.init(named: "groupsAvatar/HipHop"), name: "HipHop"),
         Group(image: UIImage.init(named: "groupsAvatar/Alternative"), name: "Alternative")
     ]
+    var filteredGroups = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
+        filteredGroups = groups
+        
+        tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
     }
 
     // MARK: - Table view data source
@@ -33,20 +40,40 @@ class AllGroupsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return filteredGroups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as? AllGroupsCell else {
-            preconditionFailure("AllGroupsCell cannot find")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellForList", for: indexPath) as? CellForList else {
+            preconditionFailure("Error")
         }
         
-        cell.labelAllGroupsCell.text = groups[indexPath.row].name
-        cell.imageAllGroupCell.image = groups[indexPath.row].image
+        cell.labelForList.text = filteredGroups[indexPath.row].name
+        cell.avaImageForList.image = filteredGroups[indexPath.row].image
         
         return cell
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredGroups = []
+        
+        if searchText == "" {
+            
+            filteredGroups = groups
+        } else {
+            for group in groups {
+                
+                if group.name.lowercased().contains(searchText.lowercased()) {
+                    
+                    filteredGroups.append(group)
+                }
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
+
 }

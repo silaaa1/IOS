@@ -124,50 +124,12 @@
         <!--Communities-->
         <scene sceneID="lyA-yY-sCl">
             <objects>
-                <tableViewController id="vtR-c0-HeZ" customClass="ListOfGroupsController" customModule="VKproject_СилаАлександр" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ListOfGroupsController" id="vtR-c0-HeZ" customClass="ListOfGroupsController" customModule="VKproject_СилаАлександр" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="z70-dh-l5s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="80" id="3Ns-O5-aQT" customClass="GroupCell" customModule="VKproject_СилаАлександр" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Ns-O5-aQT" id="rbd-lX-CVY">
-                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="44N-hO-6Uy">
-                                            <rect key="frame" x="20" y="0.5" width="80" height="79"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="44N-hO-6Uy" secondAttribute="height" multiplier="1:1" id="Fvu-o0-lS9"/>
-                                                <constraint firstAttribute="height" constant="80" id="PTf-Z5-Q3v"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrS-dv-cYb">
-                                            <rect key="frame" x="120" y="29.5" width="237.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="UrS-dv-cYb" firstAttribute="centerY" secondItem="44N-hO-6Uy" secondAttribute="centerY" id="GpX-AL-ZGS"/>
-                                        <constraint firstAttribute="bottom" secondItem="44N-hO-6Uy" secondAttribute="bottom" id="Lhd-C7-UHr"/>
-                                        <constraint firstItem="44N-hO-6Uy" firstAttribute="leading" secondItem="rbd-lX-CVY" secondAttribute="leading" constant="20" id="Tdx-1m-p09"/>
-                                        <constraint firstItem="44N-hO-6Uy" firstAttribute="top" secondItem="rbd-lX-CVY" secondAttribute="top" id="c0k-qx-P2s"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="UrS-dv-cYb" secondAttribute="trailing" constant="20" id="eWB-RY-yU3"/>
-                                        <constraint firstItem="UrS-dv-cYb" firstAttribute="leading" secondItem="44N-hO-6Uy" secondAttribute="trailing" constant="20" id="m5W-aW-LBb"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outlet property="imageGroupCell" destination="44N-hO-6Uy" id="fX7-bt-yp8"/>
-                                    <outlet property="labelGroupCell" destination="UrS-dv-cYb" id="txG-9w-NaL"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="vtR-c0-HeZ" id="P7M-fG-hqv"/>
@@ -267,59 +229,30 @@
         <!--All Groups Controller-->
         <scene sceneID="rjI-LR-Gp3">
             <objects>
-                <tableViewController id="16g-eF-dd0" customClass="AllGroupsController" customModule="VKproject_СилаАлександр" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ieD-aq-f6f">
+                <tableViewController storyboardIdentifier="AllGroupsController" id="16g-eF-dd0" customClass="AllGroupsController" customModule="VKproject_СилаАлександр" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="ieD-aq-f6f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGroupsCell" rowHeight="80" id="EUy-hv-Vjj" customClass="AllGroupsCell" customModule="VKproject_СилаАлександр" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EUy-hv-Vjj" id="x9g-2X-r9n">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f9R-NO-w95">
-                                            <rect key="frame" x="20" y="1.5" width="80" height="77"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="f9R-NO-w95" secondAttribute="height" multiplier="1:1" id="hB4-4l-QwO"/>
-                                                <constraint firstAttribute="height" constant="80" id="iye-sx-nJf"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v25-s2-HTT">
-                                            <rect key="frame" x="120" y="29.5" width="254" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="v25-s2-HTT" firstAttribute="leading" secondItem="f9R-NO-w95" secondAttribute="trailing" constant="20" id="FxJ-za-mbo"/>
-                                        <constraint firstItem="f9R-NO-w95" firstAttribute="top" secondItem="x9g-2X-r9n" secondAttribute="top" id="LHC-8q-MZV"/>
-                                        <constraint firstItem="v25-s2-HTT" firstAttribute="centerY" secondItem="f9R-NO-w95" secondAttribute="centerY" id="M6c-0a-LQv"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="v25-s2-HTT" secondAttribute="trailing" constant="20" id="Nb2-w1-kzI"/>
-                                        <constraint firstAttribute="bottom" secondItem="f9R-NO-w95" secondAttribute="bottom" id="miD-3d-kNM"/>
-                                        <constraint firstItem="f9R-NO-w95" firstAttribute="leading" secondItem="x9g-2X-r9n" secondAttribute="leading" constant="20" id="yJf-lN-Yht"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imageAllGroupCell" destination="f9R-NO-w95" id="3EW-V0-67r"/>
-                                    <outlet property="labelAllGroupsCell" destination="v25-s2-HTT" id="24X-Gs-K2U"/>
-                                    <segue destination="mrf-t1-Jb0" kind="unwind" unwindAction="addSelectedGroupWithSegue:" id="Kmj-YU-Jji"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="o96-lT-05W">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="16g-eF-dd0" id="OWf-CI-9bh"/>
                             <outlet property="delegate" destination="16g-eF-dd0" id="zJS-wF-zb5"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="uNt-bf-KTm"/>
+                    <connections>
+                        <outlet property="searchBar" destination="o96-lT-05W" id="Q56-mS-0OA"/>
+                        <segue destination="wY9-hq-wcR" kind="unwind" identifier="addSelectedGroupSegue" unwindAction="addSelectedGroupSegue:" id="Hr3-Ec-Xda"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb6-ZV-ISM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="mrf-t1-Jb0" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="wY9-hq-wcR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4521.739130434783" y="109.82142857142857"/>
         </scene>
@@ -327,78 +260,9 @@
         <scene sceneID="U3t-UM-LZk">
             <objects>
                 <tableViewController id="vfB-5Q-n7w" customClass="ListOfFriendsController" customModule="VKproject_СилаАлександр" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="k06-A0-ck6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" id="k06-A0-ck6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" rowHeight="77" id="JHF-Zz-CwI" customClass="FriendCell" customModule="VKproject_СилаАлександр" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="414" height="77"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHF-Zz-CwI" id="Ncd-kh-ju4">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="77"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gi-zK-cOW">
-                                            <rect key="frame" x="117" y="28" width="257" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbh-NU-MaT" customClass="avatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="0.0" width="77" height="77"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJn-zF-HFO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uBN-Og-s53">
-                                                    <rect key="frame" x="0.0" y="1.5" width="77" height="74.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="gJn-zF-HFO" secondAttribute="bottom" id="71Z-Pj-O2x"/>
-                                                <constraint firstAttribute="trailing" secondItem="gJn-zF-HFO" secondAttribute="trailing" id="9V8-lh-6kw"/>
-                                                <constraint firstItem="uBN-Og-s53" firstAttribute="leading" secondItem="tbh-NU-MaT" secondAttribute="leading" id="KAU-VE-bTD"/>
-                                                <constraint firstAttribute="height" constant="70" id="MrJ-v8-Rf6"/>
-                                                <constraint firstAttribute="width" secondItem="tbh-NU-MaT" secondAttribute="height" multiplier="1:1" id="SwF-lo-Deq"/>
-                                                <constraint firstAttribute="trailing" secondItem="uBN-Og-s53" secondAttribute="trailing" id="Zvp-io-fqB"/>
-                                                <constraint firstItem="gJn-zF-HFO" firstAttribute="leading" secondItem="tbh-NU-MaT" secondAttribute="leading" id="pJQ-QD-omi"/>
-                                                <constraint firstAttribute="bottom" secondItem="uBN-Og-s53" secondAttribute="bottom" id="rQv-zo-wGd"/>
-                                                <constraint firstItem="uBN-Og-s53" firstAttribute="top" secondItem="tbh-NU-MaT" secondAttribute="top" id="vL6-n9-4ds"/>
-                                                <constraint firstItem="gJn-zF-HFO" firstAttribute="top" secondItem="tbh-NU-MaT" secondAttribute="top" id="ye7-sT-9MZ"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                    <real key="value" value="8"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                    <real key="value" value="6"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                            <connections>
-                                                <outletCollection property="avatarImageViews" destination="uBN-Og-s53" collectionClass="NSMutableArray" id="u1X-St-rF4"/>
-                                                <outletCollection property="shadowViews" destination="gJn-zF-HFO" collectionClass="NSMutableArray" id="p3F-TZ-a24"/>
-                                            </connections>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="5Gi-zK-cOW" secondAttribute="trailing" constant="20" id="418-1D-bk0"/>
-                                        <constraint firstItem="tbh-NU-MaT" firstAttribute="leading" secondItem="Ncd-kh-ju4" secondAttribute="leading" constant="20" id="4M9-UE-fiw"/>
-                                        <constraint firstItem="5Gi-zK-cOW" firstAttribute="centerY" secondItem="tbh-NU-MaT" secondAttribute="centerY" id="DhN-6i-SCM"/>
-                                        <constraint firstItem="5Gi-zK-cOW" firstAttribute="leading" secondItem="tbh-NU-MaT" secondAttribute="trailing" constant="20" id="WYw-K9-fNJ"/>
-                                        <constraint firstItem="tbh-NU-MaT" firstAttribute="top" secondItem="Ncd-kh-ju4" secondAttribute="top" id="Ya0-So-QHa"/>
-                                        <constraint firstAttribute="bottom" secondItem="tbh-NU-MaT" secondAttribute="bottom" id="lWM-JH-nXw"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imageFriendCell" destination="uBN-Og-s53" id="ylh-9D-SXh"/>
-                                    <outlet property="labelFriendCell" destination="5Gi-zK-cOW" id="1xA-E9-zRw"/>
-                                    <segue destination="v9N-0h-Mu6" kind="show" identifier="FriendFromList" id="1n3-bc-KnQ"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="vfB-5Q-n7w" id="KCo-9P-N5g"/>
@@ -595,7 +459,6 @@
     <resources>
         <image name="Label" width="1330" height="732"/>
         <image name="house.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

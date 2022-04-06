@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AnoutherNewsCell: UITableViewCell {
+class AnotherNewsCell: UITableViewCell {
 
     
     @IBOutlet var anotherNewsAvaImage: UIImageView!

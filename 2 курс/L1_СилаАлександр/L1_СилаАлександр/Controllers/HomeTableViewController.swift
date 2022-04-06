@@ -4,24 +4,24 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     var moments = [
-    Moments(image: UIImage(named: "friendsAvatar/Alekseev"), name: "Ivan"),
-    Moments(image: UIImage(named: "friendsAvatar/Cobain"), name: "Kurt"),
-    Moments(image: UIImage(named: "groupsAvatar/HipHop"), name: "HipHop"),
-    Moments(image: UIImage(named: "groupsAvatar/Pop"), name: "Pop"),
-    Moments(image: UIImage(named: "friendsAvatar/Joseph"), name: "Tyler"),
-    Moments(image: UIImage(named: "groupsAvatar/Jazz"), name: "Jazz"),
-    Moments(image: UIImage(named: "groupsAvatar/Rock"), name: "Rock"),
-    Moments(image: UIImage(named: "friendsAvatar/Sheeran"), name: "Ed"),
-    Moments(image: UIImage(named: "groupsAvatar/Alternative"), name: "Alternative")
+        Moments(image: UIImage(named: "friendsAvatar/Alekseev"), name: "Ivan"),
+        Moments(image: UIImage(named: "friendsAvatar/Cobain"), name: "Kurt"),
+        Moments(image: UIImage(named: "groupsAvatar/HipHop"), name: "HipHop"),
+        Moments(image: UIImage(named: "groupsAvatar/Pop"), name: "Pop"),
+        Moments(image: UIImage(named: "friendsAvatar/Joseph"), name: "Tyler"),
+        Moments(image: UIImage(named: "groupsAvatar/Jazz"), name: "Jazz"),
+        Moments(image: UIImage(named: "groupsAvatar/Rock"), name: "Rock"),
+        Moments(image: UIImage(named: "friendsAvatar/Sheeran"), name: "Ed"),
+        Moments(image: UIImage(named: "groupsAvatar/Alternative"), name: "Alternative")
     ]
     
     var news = [
         News(avatarImage: UIImage(named: "groupsAvatar/HipHop"), name: "HipHop", timeOfPublication: "today 10:50", text: "test", image: UIImage(named: "News_Tyler-the-Creator")),
         News(avatarImage: UIImage(named: "friendsAvatar/Sheeran"), name: "Ed Sheeran", timeOfPublication: "today 10:30", text: "Сover of my new album!", image: UIImage(named: "News_ed album")),
-    News(avatarImage: UIImage(named: "groupsAvatar/Rock"), name: "Rock", timeOfPublication: "yesterday 21:48", text: "test", image: UIImage(named: "News_linkin-park")),
-    News(avatarImage: UIImage(named: "friendsAvatar/Rutherford")!, name: "Jesse Rutherford", timeOfPublication: "yesterday 21:15", text: "test", image: UIImage(named: "News_Jesse")),
-    News(avatarImage: UIImage(named: "friendsAvatar/Alekseev")!, name: "Ivan Alekseev", timeOfPublication: "yesterday 15:21", text: "Exit to the city.", image: UIImage(named: "News_exit to the city")),
-    News(avatarImage: UIImage(named: "groupsAvatar/Classical"), name: "Classical", timeOfPublication: "yesterday 13:06", text: "test", image: UIImage(named: "News_bah"))
+        News(avatarImage: UIImage(named: "groupsAvatar/Rock"), name: "Rock", timeOfPublication: "yesterday 21:48", text: "test", image: UIImage(named: "News_linkin-park")),
+        News(avatarImage: UIImage(named: "friendsAvatar/Rutherford")!, name: "Jesse Rutherford", timeOfPublication: "yesterday 21:15", text: "test", image: UIImage(named: "News_Jesse")),
+        News(avatarImage: UIImage(named: "friendsAvatar/Alekseev")!, name: "Ivan Alekseev", timeOfPublication: "yesterday 15:21", text: "Exit to the city.", image: UIImage(named: "News_exit to the city")),
+        News(avatarImage: UIImage(named: "groupsAvatar/Classical"), name: "Classical", timeOfPublication: "yesterday 13:06", text: "test", image: UIImage(named: "News_bah"))
     ]
 
     override func viewDidLoad() {
@@ -49,22 +49,16 @@ class HomeTableViewController: UITableViewController {
                 cell.configure(with: moments)
                 return cell
             }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnoutherNewsCell", for: indexPath) as! AnoutherNewsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnoutherNewsCell", for: indexPath) as! AnotherNewsCell
         
         cell.anotherNewsAvaImage.image = news[indexPath.row].avatarImage
         cell.anotherNewsName.text = news[indexPath.row].name
         cell.anoutherNewsTime.text = news[indexPath.row].timeOfPublication
         cell.anotherNewsText.text = news[indexPath.row].text
         cell.anotherNewsImage.image = news[indexPath.row].image
-
-//                cell.avatarImageNews.image = news[indexPath.row].avatarImage
-//                cell.nameLabelNews.text = news[indexPath.row].name
-//                cell.timeLabelNews.text = news[indexPath.row].timeOfPublication
-//                cell.textLabelNews.text = news[indexPath.row].text
-//                cell.imageNews.image = news[indexPath.row].image
-
-                return cell
-            }
+        
+        return cell
+        }
         
     }
 
