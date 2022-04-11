@@ -15,6 +15,7 @@
 		F81EB74B27C50BCA00E657B1 /* FriendInfoVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EB74A27C50BCA00E657B1 /* FriendInfoVeiwController.swift */; };
 		F81EB74D27C50C3800E657B1 /* FriendInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81EB74C27C50C3800E657B1 /* FriendInfoCell.swift */; };
 		F822946427BF9CDC00E635D6 /* UIViewController + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */; };
+		F82DD70128002AA400D37A01 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82DD70028002AA400D37A01 /* Animations.swift */; };
 		F83B6A1627BA805D00D7179C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1527BA805D00D7179C /* AppDelegate.swift */; };
 		F83B6A1827BA805D00D7179C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1727BA805D00D7179C /* SceneDelegate.swift */; };
 		F83B6A1A27BA805D00D7179C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B6A1927BA805D00D7179C /* LoginViewController.swift */; };
@@ -46,6 +47,7 @@
 		F81EB74A27C50BCA00E657B1 /* FriendInfoVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoVeiwController.swift; sourceTree = "<group>"; };
 		F81EB74C27C50C3800E657B1 /* FriendInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoCell.swift; sourceTree = "<group>"; };
 		F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extention.swift"; sourceTree = "<group>"; };
+		F82DD70028002AA400D37A01 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		F83B6A1227BA805D00D7179C /* VKproject_СилаАлександр.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VKproject_СилаАлександр.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83B6A1527BA805D00D7179C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F83B6A1727BA805D00D7179C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F822946327BF9CDC00E635D6 /* UIViewController + Extention.swift */,
+				F82DD70028002AA400D37A01 /* Animations.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				F870CD9827EDC832002410B7 /* Moments.swift in Sources */,
 				F8740EB827EA120E0060E72B /* avatarUIView.swift in Sources */,
 				F822946427BF9CDC00E635D6 /* UIViewController + Extention.swift in Sources */,
+				F82DD70128002AA400D37A01 /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

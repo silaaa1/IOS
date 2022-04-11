@@ -20,26 +20,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-Sr-cps" customClass="avatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
                         <rect key="frame" x="15" y="7" width="40" height="40"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UR1-VI-xs8">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ve-qo-mcK">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UR1-VI-xs8">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-DF-q7W">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVL-DF-q7W">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UR1-VI-xs8" firstAttribute="leading" secondItem="7qP-Sr-cps" secondAttribute="leading" id="0iE-Zv-Zsm"/>
-                            <constraint firstAttribute="bottom" secondItem="KVL-DF-q7W" secondAttribute="bottom" id="7ak-r9-Uja"/>
-                            <constraint firstAttribute="trailing" secondItem="KVL-DF-q7W" secondAttribute="trailing" id="J4d-bV-3ca"/>
-                            <constraint firstItem="KVL-DF-q7W" firstAttribute="leading" secondItem="7qP-Sr-cps" secondAttribute="leading" id="MMO-fy-rSB"/>
+                            <constraint firstAttribute="trailing" secondItem="6ve-qo-mcK" secondAttribute="trailing" id="1aT-Y6-maE"/>
+                            <constraint firstItem="6ve-qo-mcK" firstAttribute="leading" secondItem="7qP-Sr-cps" secondAttribute="leading" id="PFZ-Eo-Xas"/>
                             <constraint firstAttribute="width" secondItem="7qP-Sr-cps" secondAttribute="height" multiplier="1:1" id="VSe-gk-D6R"/>
-                            <constraint firstAttribute="bottom" secondItem="UR1-VI-xs8" secondAttribute="bottom" id="Y7r-bi-5No"/>
-                            <constraint firstItem="UR1-VI-xs8" firstAttribute="top" secondItem="7qP-Sr-cps" secondAttribute="top" id="df7-A2-gss"/>
-                            <constraint firstItem="KVL-DF-q7W" firstAttribute="top" secondItem="7qP-Sr-cps" secondAttribute="top" id="q4K-MQ-HRs"/>
+                            <constraint firstAttribute="bottom" secondItem="6ve-qo-mcK" secondAttribute="bottom" id="aPf-gc-zY9"/>
                             <constraint firstAttribute="height" constant="40" id="rAI-4l-a1g"/>
-                            <constraint firstAttribute="trailing" secondItem="UR1-VI-xs8" secondAttribute="trailing" id="uEc-j4-Yss"/>
+                            <constraint firstItem="6ve-qo-mcK" firstAttribute="top" secondItem="7qP-Sr-cps" secondAttribute="top" id="zWm-5r-h0B"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
@@ -50,8 +54,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outletCollection property="avatarImageViews" destination="KVL-DF-q7W" collectionClass="NSMutableArray" id="Bfj-lz-Sg8"/>
+                            <outletCollection property="contanierForAnimation" destination="6ve-qo-mcK" collectionClass="NSMutableArray" id="FZC-TF-S8z"/>
                             <outletCollection property="shadowViews" destination="UR1-VI-xs8" collectionClass="NSMutableArray" id="eiB-kH-mrb"/>
+                            <outletCollection property="avatarImageViews" destination="KVL-DF-q7W" collectionClass="NSMutableArray" id="Bfj-lz-Sg8"/>
                         </connections>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJo-OG-IMG">

@@ -8,12 +8,18 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginInput: UITextField!
     @IBOutlet var passwordInput: UITextField!
     
+    @IBOutlet var animationBackground: UIView!
+    @IBOutlet var animation1: UIView!
+    @IBOutlet var animation2: UIView!
+    @IBOutlet var animation3: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hideKeyboardGestue = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView.addGestureRecognizer(hideKeyboardGestue)
+        
+        loadingAnimation(loadingBackground: animationBackground, point1: animation1, point2: animation2, point3: animation3)
     }
 
     
@@ -28,12 +34,8 @@ class LoginViewController: UIViewController {
             self.passwordInput.text?.removeAll()
                   return
               }
-        
         performSegue(withIdentifier: "Log in", sender: nil)
     }
-    
-
-
     
     @objc func keyBoardWasShown(notification: Notification) {
         let info = notification.userInfo! as
@@ -43,6 +45,7 @@ class LoginViewController: UIViewController {
 
         self.scrollView.contentInset = contentInsets
     }
+    
     @objc func keyBoardWillBeHidden(notification: Notification) {
         let contentInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInsets

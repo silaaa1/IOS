@@ -25,14 +25,12 @@ class AnotherNewsCell: UITableViewCell {
         likeControl.isLike.toggle()
         
         if likeControl.isLike {
-            likeControl.likeImage.image = UIImage(systemName: "heart.fill")
-            likeControl.likeImage.tintColor = UIColor.systemPink
+            likeAnimation(imageView: likeControl.likeImage)
             likeControl.numberOfLikes += 1
             likeControl.likeLabel.text = "\(likeControl.numberOfLikes)"
             likeControl.likeLabel.textColor = UIColor.systemPink
         } else {
-            likeControl.likeImage.image = UIImage(systemName: "heart")
-            likeControl.likeImage.tintColor = UIColor.systemGray
+            unlikeAnimation(imageView: likeControl.likeImage)
             likeControl.numberOfLikes -= 1
             likeControl.likeLabel.text = "\(likeControl.numberOfLikes)"
             likeControl.likeLabel.textColor = UIColor.systemGray
