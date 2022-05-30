@@ -3,29 +3,20 @@ import UIKit
 
 class ListOfFriendsController: UITableViewController {
     
-    let friends = [
-        Friend(image: UIImage.init(named: "friendsAvatar/Cobain"), name: "Kurt Cobain"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Alekseev"), name: "Ivan Alekseev"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Sinatra"), name: "Frank Sinatra"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Rutherford"), name: "Jesse Rutherford"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Sheeran"), name: "Ed Sheeran"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Joseph"), name: "Tyler Joseph"),
-        Friend(image: UIImage.init(named: "friendsAvatar/Dun"), name: "Josh Dun")
-    ]
-    
-    var sortedFriends = [Character: [Friend]]()
+    private let localService = LocalLoaderFriend()
+    var sortedFriends = [Character: [LocalFriendModel]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
         
-        self.sortedFriends = sort(friends: friends)
+        self.sortedFriends = sort(friends: localService.friends)
     }
     
-    private func sort(friends: [Friend]) -> [Character: [Friend]] {
+    private func sort(friends: [LocalFriendModel]) -> [Character: [LocalFriendModel]] {
         
-        var friendsDict = [Character: [Friend]]()
+        var friendsDict = [Character: [LocalFriendModel]]()
         
         friends.forEach() {friend in
             
@@ -81,14 +72,14 @@ class ListOfFriendsController: UITableViewController {
         String(sortedFriends.keys.sorted()[section])
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "FriendFromList",
-           let destinationVC = segue.destination as? FriendInfoVeiwController,
-           let indexPath = tableView.indexPathForSelectedRow
-        {
-            let friends = friends[indexPath.row].name
-            destinationVC.title = friends
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "FriendFromList",
+//           let destinationVC = segue.destination as? FriendInfoVeiwController,
+//           let indexPath = tableView.indexPathForSelectedRow
+//        {
+//            let friends = friends[indexPath.row].name
+//            destinationVC.title = friends
+//        }
+//    }
 
 }

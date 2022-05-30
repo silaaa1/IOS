@@ -27,7 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-Y0-lNu" customClass="avatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWt-Y0-lNu" customClass="AvatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
                         <rect key="frame" x="15" y="5" width="57" height="60"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jqd-2f-YNk">
@@ -64,9 +64,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outletCollection property="contanierForAnimation" destination="Jqd-2f-YNk" collectionClass="NSMutableArray" id="i6C-0D-yhg"/>
-                            <outletCollection property="shadowViews" destination="qsO-Ry-BS7" collectionClass="NSMutableArray" id="4ys-5H-dKI"/>
-                            <outletCollection property="avatarImageViews" destination="2En-VE-zDb" collectionClass="NSMutableArray" id="iFq-XJ-mor"/>
+                            <outletCollection property="avatarImageViews" destination="2En-VE-zDb" collectionClass="NSMutableArray" id="jQA-a9-27f"/>
+                            <outletCollection property="shadowViews" destination="qsO-Ry-BS7" collectionClass="NSMutableArray" id="b8s-a6-pxa"/>
+                            <outletCollection property="contanierForAnimation" destination="Jqd-2f-YNk" collectionClass="NSMutableArray" id="5P4-vH-0gH"/>
                         </connections>
                     </view>
                 </subviews>

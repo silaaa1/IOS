@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-Sr-cps" customClass="avatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7qP-Sr-cps" customClass="AvatarUIView" customModule="VKproject_СилаАлександр" customModuleProvider="target">
                         <rect key="frame" x="15" y="7" width="40" height="40"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ve-qo-mcK">
@@ -54,9 +54,9 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outletCollection property="contanierForAnimation" destination="6ve-qo-mcK" collectionClass="NSMutableArray" id="FZC-TF-S8z"/>
-                            <outletCollection property="shadowViews" destination="UR1-VI-xs8" collectionClass="NSMutableArray" id="eiB-kH-mrb"/>
-                            <outletCollection property="avatarImageViews" destination="KVL-DF-q7W" collectionClass="NSMutableArray" id="Bfj-lz-Sg8"/>
+                            <outletCollection property="avatarImageViews" destination="KVL-DF-q7W" collectionClass="NSMutableArray" id="k4o-sr-s6m"/>
+                            <outletCollection property="shadowViews" destination="UR1-VI-xs8" collectionClass="NSMutableArray" id="e5V-WD-6hK"/>
+                            <outletCollection property="contanierForAnimation" destination="6ve-qo-mcK" collectionClass="NSMutableArray" id="JPq-oc-CUo"/>
                         </connections>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJo-OG-IMG">

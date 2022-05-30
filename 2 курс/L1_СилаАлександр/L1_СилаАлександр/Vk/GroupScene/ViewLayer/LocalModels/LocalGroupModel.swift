@@ -1,7 +1,7 @@
 
 import UIKit
 
-struct Friend {
+struct LocalGroupModel {
     
     let image: UIImage?
     let name: String

@@ -5,28 +5,14 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
 
     @IBOutlet var searchBar: UISearchBar!
     
-    let groups = [
-        Group(image: UIImage.init(named: "groupsAvatar/Electro"), name: "Electro"),
-        Group(image: UIImage.init(named: "groupsAvatar/Music skills"), name: "Music skills"),
-        Group(image: UIImage.init(named: "groupsAvatar/Drums"), name: "Drums"),
-        Group(image: UIImage.init(named: "groupsAvatar/Guitars"), name: "Guitars"),
-        Group(image: UIImage.init(named: "groupsAvatar/Vokal"), name: "Vokal"),
-        Group(image: UIImage.init(named: "groupsAvatar/Piano"), name: "Piano"),
-        Group(image: UIImage.init(named: "groupsAvatar/Reggae"), name: "Reggae"),
-        Group(image: UIImage.init(named: "groupsAvatar/Rock"), name: "Rock"),
-        Group(image: UIImage.init(named: "groupsAvatar/Pop"), name: "Pop"),
-        Group(image: UIImage.init(named: "groupsAvatar/Jazz"), name: "Jazz"),
-        Group(image: UIImage.init(named: "groupsAvatar/Classical"), name: "Classical"),
-        Group(image: UIImage.init(named: "groupsAvatar/HipHop"), name: "HipHop"),
-        Group(image: UIImage.init(named: "groupsAvatar/Alternative"), name: "Alternative")
-    ]
-    var filteredGroups = [Group]()
+    private let localService = LocalLoaderGroup()
+    var filteredGroups = [LocalGroupModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
-        filteredGroups = groups
+        filteredGroups = localService.allGroups
         
         tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
     }
@@ -62,9 +48,9 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
         
         if searchText == "" {
             
-            filteredGroups = groups
+            filteredGroups = localService.allGroups
         } else {
-            for group in groups {
+            for group in localService.allGroups {
                 
                 if group.name.lowercased().contains(searchText.lowercased()) {
                     

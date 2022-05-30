@@ -1,7 +1,13 @@
+//
+//  AvatarUIView.swift
+//  VKproject_СилаАлександр
+//
+//  Created by Александр Сила on 30.05.2022.
+//
 
 import UIKit
 
-class avatarUIView: UIView {
+class AvatarUIView: UIView {
     
     @IBOutlet var avatarImageViews: [UIImageView] = []
     @IBOutlet var shadowViews: [UIView] = []
