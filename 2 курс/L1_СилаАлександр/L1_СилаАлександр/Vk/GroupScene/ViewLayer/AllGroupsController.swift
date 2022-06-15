@@ -42,6 +42,11 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         filteredGroups = []
@@ -55,11 +60,10 @@ class AllGroupsController: UITableViewController, UISearchBarDelegate {
                 if group.name.lowercased().contains(searchText.lowercased()) {
                     
                     filteredGroups.append(group)
+                    loadSearchGroups(searchText)
                 }
             }
         }
         self.tableView.reloadData()
     }
-    
-
 }

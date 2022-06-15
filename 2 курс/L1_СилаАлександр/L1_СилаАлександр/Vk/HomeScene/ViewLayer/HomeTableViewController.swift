@@ -9,6 +9,7 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "AnoutherNewsCell", bundle: nil), forCellReuseIdentifier: "AnoutherNewsCell")
+        loadNewsfeed()
     }
 
     // MARK: - Table view data source

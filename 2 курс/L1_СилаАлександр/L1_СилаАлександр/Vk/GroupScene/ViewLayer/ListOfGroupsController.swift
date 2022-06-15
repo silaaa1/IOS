@@ -9,6 +9,7 @@ class ListOfGroupsController: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "CellForList", bundle: nil), forCellReuseIdentifier: "CellForList")
+        loadGroups()
     }
 
     // MARK: - Table view data source
@@ -53,7 +54,7 @@ class ListOfGroupsController: UITableViewController {
         }
     }
     
-//    MARK: - Is't work, fix or remake
+//    MARK: - Isn't work, fix or remake
 //    @IBAction func addSelectedGroupSegue(_ unwindSegue: UIStoryboardSegue) {
 //        
 //        if let sourceViewController = unwindSegue.source as? AllGroupsController,
